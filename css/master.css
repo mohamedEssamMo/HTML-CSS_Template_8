@@ -1,0 +1,192 @@
+:root{
+    --main-color: rgb(0, 140, 255);
+}
+
+
+body{
+    text-transform: capitalize;
+}
+a{
+    text-decoration: none;
+}
+.login{
+    margin: 20px;
+    height: calc(100vh - 80px);
+}
+.login div.main-login{
+    width: 50%;
+    margin-top: 50px;
+}
+@media (max-width: 767px) {
+    .login{
+        flex-direction: column;
+    }
+    .login div.main-login{
+        width: 100%;
+    }
+}
+.login .logo{
+    top: -60px;
+    left: 0px;
+}
+.login .logo i{
+    color: var(--main-color);
+    margin-right: 5px;
+    font-size: 26px;
+}
+.login .logo h1{
+    font-size: 26px;
+}
+.main-login .msg h2{
+    font-size: 40px;
+}
+.main-login .msg span{
+    font-size: 20px;
+}
+.sign-with{
+    padding-bottom: 30px;
+}
+.sign-with a{
+    border: 1px solid grey;
+    color: black;
+}
+.sign-with a img{
+    width: 15px;
+    height: 15px;
+}
+.sign-with span.alt-span{
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,50%);
+    -webkit-transform: translate(-50%,50%);
+    -moz-transform: translate(-50%,50%);
+    -ms-transform: translate(-50%,50%);
+    -o-transform: translate(-50%,50%);
+}
+form{
+    margin-top: 25px;
+}
+form .child{
+    border: 1px solid #ccc;
+    min-width: 400px;
+}
+@media (max-width: 767px) {
+    .main-login{
+        margin-top: 100px;
+    }
+    .main-login .msg h2{
+        font-size: 32px;
+    }
+    .main-login .msg span{
+        font-size: 16px;
+    }
+    .main-login .sign-with a span{
+        font-size: 12px;
+    }
+    form .child{
+        min-width: 200px;
+    }
+    form div.child .remember{
+        font-size: 12px;
+    }
+    form div.child a{
+        font-size: 12px;
+    }
+    form > span{
+        font-size: 14px;
+    }
+}
+form input:focus{
+    outline: 1px solid var(--main-color);
+    border: none;
+}
+form div.child{
+    border: none;
+}
+form div.child div label{
+    padding-left: 30px;
+    transition: .3;
+    -webkit-transition: .3s;
+    -moz-transition: .3;
+    -ms-transition: .3;
+    -o-transition: .3;
+}
+form div.child div input[type="checkbox"]{
+    -webkit-appearance: none;
+    appearance: none;
+    opacity: 0;
+}
+form div.child div label::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border: 2px solid #fff;
+    outline: 2px solid var(--main-color);
+    border-radius: 50%;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+form div.child div input[type="checkbox"]:checked + label::before{
+    background-color: var(--main-color);
+}
+form div.child div input[type="checkbox"]:hover + label{
+    color: var(--main-color);
+}
+form .child[type="submit"]{
+    color: white;
+    background-color: var(--main-color);
+}
+/* start cover-background  */
+.cover-background{
+    width: 50%;
+    margin-left: 20px;
+    background-image: url(../imgs/18191.jpg);
+    background-size: cover;
+}
+.cover-background::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #194afbf3;
+    z-index: 5;
+}
+.cover-background img{
+    width: 150px;
+    height: 150px;
+}
+.cover-background img:first-of-type{
+    top: 30px;
+    left: 30px;
+}
+.cover-background img:nth-of-type(2){
+    bottom: 70px;
+    left: 20px;
+}
+.cover-background img:nth-of-type(3){
+    top: 70px;
+    right: 20px;
+}
+.cover-background img:nth-of-type(4){
+    bottom: 30px;
+    right: 30px;
+}
+.cover-background img:last-of-type{
+    position: relative;
+    z-index: 7;
+    width: 80%;
+    height: 80%;
+}
+div.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #194afb45;
+    z-index: 100;
+}
